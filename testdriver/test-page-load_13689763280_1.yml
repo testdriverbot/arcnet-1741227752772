@@ -1,0 +1,18 @@
+version: 4.2.12
+session: 67c9090287ffd6929e3064b5
+steps:
+  - prompt: Refresh the current page in the browser.
+    commands:
+      - command: press-keys
+        keys:
+          - f5
+  - prompt: Assert that the page loads successfully without errors.
+    commands:
+      - command: assert
+        expect: Arc is the Chrome replacement I've been waiting for is visible
+  - prompt: Assert that all expected elements are displayed correctly.
+    commands:
+      - command: assert
+        expect: Arc is the Chrome replacement I've been waiting for is visible
+      - command: assert
+        expect: Download Arc for Windows button is visible
