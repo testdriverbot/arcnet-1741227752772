@@ -1,0 +1,17 @@
+version: 4.2.12
+session: 67c9090ff83fdb2e1aab657e
+steps:
+  - prompt: Click on the "Students" link in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Students
+        description: link in the navigation menu
+        action: click
+  - prompt: Assert that the page navigates to the Students section or form.
+    commands:
+      - command: assert
+        expect: ARC FOR STUDENTS is visible on the page
+  - prompt: Assert that no errors are shown on the page.
+    commands:
+      - command: assert
+        expect: no error messages are visible on the page
