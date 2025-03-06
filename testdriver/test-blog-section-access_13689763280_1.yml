@@ -1,0 +1,21 @@
+version: 4.2.12
+session: 67c90907f83fdb2e1aab6577
+steps:
+  - prompt: Click on the "Blog" link in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Blog
+        description: blog link in the navigation menu
+        action: click
+  - prompt: Assert that the page navigates to the Blog section.
+    commands:
+      - command: assert
+        expect: the page title is "Blog – Arc"
+  - prompt: Assert that articles or posts are listed without errors.
+    commands:
+      - command: assert
+        expect: articles are listed on the blog page
+  - prompt: Assert that articles or posts are listed without errors.
+    commands:
+      - command: assert
+        expect: articles are listed on the blog page
