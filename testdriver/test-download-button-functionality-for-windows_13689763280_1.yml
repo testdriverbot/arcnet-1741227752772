@@ -1,0 +1,17 @@
+version: 4.2.12
+session: 67c9090ef83fdb2e1aab657c
+steps:
+  - prompt: Click the "Download Arc for Windows" button.
+    commands:
+      - command: hover-text
+        text: Download Arc for Windows
+        description: download button for Arc browser
+        action: click
+  - prompt: Assert that the download begins or a confirmation popup is displayed.
+    commands:
+      - command: assert
+        expect: the "Thanks for downloading Arc!" page is displayed
+  - prompt: Assert that no errors are shown during the process.
+    commands:
+      - command: assert
+        expect: no error messages are displayed on the page
